@@ -3,19 +3,27 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
+  const gustos = ['Programacion', 'Mate', 'Patagonia'];
+  return gustos[0]
 }
-
+devolverPrimerElemento()
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
+  const gustos = ['Programacion', 'Mate', 'Patagonia'];
+  return gustos[2]
 }
+devolverUltimoElemento()
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
+  const gustos = ['Programacion', 'Mate', 'Patagonia'];
+  return gustos.length
 }
+obtenerLargoDelArray()
 
 
 function incrementarPorUno(array) {
@@ -23,14 +31,23 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+  const gustos = ['Programacion', 'Mate', 'Patagonia'];
+  for(let i = 0; i < gustos.length; i++){
+    return gustos[i]
+  }
 }
+incrementarPorUno()
 
 
 function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
+  const gustos = ['Programacion', 'Mate', 'Patagonia'];
+  gustos.push('marcos')
+  return gustos
 }
+agregarItemAlFinalDelArray()
 
 
 function agregarItemAlComienzoDelArray(array, elemento) {
@@ -38,7 +55,10 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
+  array.unshift(elemento)
+  return array
 }
+agregarItemAlComienzoDelArray(['Programacion', 'Mate', 'Patagonia'], 'marcos')
 
 
 function dePalabrasAFrase(palabras) {
@@ -47,36 +67,58 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+  return palabras.join(' ')
 }
-
+dePalabrasAFrase(['Villa', 'Nieve', 'Sol'])
 
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+  if(array.includes(elemento)){
+    return true
+  }else{
+    return false
+  }
 }
+arrayContiene(['Villa', 'Nieve', 'Sol'], 'Sol')
 
 
 function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  let sum = 0;
+
+  for(let i = 0; i < numeros.length; i++){
+    sum += numeros[i]
+  }
+  return sum
 }
+agregarNumeros([3, 5, 8, 2])
 
 
 function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  let suma = 0;
+
+  for(let index in resultadosTest){
+    suma += resultadosTest[index]
+  }
+  return suma/resultadosTest.length
 }
+promedioResultadosTest([2, 8, 2, 5, 6, 4])
 
 
 function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  return Math.max(numeros)
 }
-
+numeroMasGrande([1, 5, 8, 9])
 
 function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
