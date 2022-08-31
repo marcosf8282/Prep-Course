@@ -116,40 +116,54 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
-  return Math.max(numeros)
+  // var numeros = [1, 2, 500, 50]
+  var max = Math.max(...numeros)
+  return max
 }
-numeroMasGrande([1, 5, 8, 9])
+numeroMasGrande([2, 30, 80, 65])
 
-function multiplicarArgumentos() {
+function multiplicarArgumentos(arguments) {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
-  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
+  // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
 }
+multiplicarArgumentos()
 
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
+  Math.random(arreglo)*500
 
 }
-
+cuentoElementos(5)
 
 function diaDeLaSemana(numeroDeDia) {
   //Suponga que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente. 
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
-  
+  if(numeroDeDia === 1 || numeroDeDia === 7){
+    return ('Es fin de semana')
+  }else{
+    return ('Es dia laboral')
+  }
 } 
+diaDeLaSemana(4)
 
 
 function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  
+  cadena = n.toString();
+  if(cadena.charAt(0) === '9'){
+    return true
+  }else{
+    return false
+  }
 }
-
+empiezaConNueve(95)
 
 function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
