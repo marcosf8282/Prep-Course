@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    color: rgb(70, 64, 61);
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+}
+.divClass{
+    text-align: center;
+    padding: 20px;
+}
+img{
+    width: 400px;
+}
+a{
+    text-decoration: none;
+}
+.thirdDiv{
+    margin: auto;
+    width: 600px;
+    height: 500px;
+    background-color: rgb(171, 177, 177);
+    padding: 50px;
+    border: 2px solid #000;
+
+}
+#spanId{
+    font-size: 18px;
+    margin: 50px;
+    padding: 15px;
+}
+li{
+    display: inline-flex;
+}
