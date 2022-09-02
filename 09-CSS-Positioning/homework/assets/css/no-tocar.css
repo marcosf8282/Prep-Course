@@ -49,7 +49,7 @@ body {
 
 #ejercicioCuatro {
   display: block;
-  width: 100vw;
+  width: auto;
   height: 70px;
   background-color: #3574d2;
 }
