@@ -10,7 +10,9 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+  console.log(Object.values(objeto))
 }
+deObjetoAmatriz({D: 1, B: 2, C: 3})
 
 
 function numberOfCharacters(string) {
@@ -26,7 +28,10 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+  const rev = s.Reverse();
+  console.log(rev)
 }
+capToFront('Marcos')
 
 
 function asAmirror(str) {

@@ -8,16 +8,17 @@ function crearUsuario() {
   // {{nombre}} debe ser el nombre definido en cada instancia
   // Devuelve la clase
   // Tu código:
-  function Usuario(usuario, nombre, mail, password){
-    this.usuario = usuario;
-    this.nombre = nombre;
-    this.mail = mail;
-    this.password = password
+  class Usuario{
+    constructor(usuario, nombre, mail, password){
+      this.usuario = usuario;
+      this.nombre = nombre;
+      this.mail = mail;
+      this.password = password
+    }
   }
-  Usuario()
 
   Usuario.prototype.saludar = function(){
-    return 'Mi nombre es ' + this.nombre + ' y mi mail es ' + this.mail;
+    return 'Hola mi nombre es ' + this.nombre
   }
 
   let marcos = new Usuario('marcosf82', 'Marcos', 'marcos@gmail.com', 1234)
@@ -29,21 +30,22 @@ function crearUsuario() {
 }
 crearUsuario()
 
-function agregarMetodoPrototype(Constructor) {
+function agregarMetodoPrototype(constructor) {
   // Agrega un método al Constructor del `prototype`
   // El método debe llamarse "saludar" y debe devolver la string "Hello World!"
   // Tu código:
-  function Usuario(nombre, password){
-    this.nombre = nombre;
-    this.password = password;
-    this.saludar = 'Hello World!'
+  class bienvendio{
+    constructor(saludar){
+      this.saludar = 'Hello World!'
+    }
   }
-  Usuario()
 
   function saludo(){
     return this.saludar
   }
-  saludo()
+
+  const saludo1 = new bienvendio(saludo)
+
 }
 agregarMetodoPrototype()
 
@@ -79,15 +81,15 @@ agregarStringInvertida()
     //  }
 
     class Persona {
-      constructor(nombre, apellido, edad, domicilio) {
-        // Crea el constructor:
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.edad = edad;
-        this.domicilio = domicilio;
-        this.detalle = `Mi nombre es ${this.nombre} ${this.apellido}, tengo ${this.edad} años y vivo en ${this.domicilio}`
-      }
+    constructor(nombre, apellido, edad, domicilio) {
+      // Crea el constructor:
+      this.nombre = nombre;
+      this.apellido = apellido;
+      this.edad = edad;
+      this.domicilio = domicilio;
+      this.detalle = `Mi nombre es ${this.nombre} ${this.apellido}, tengo ${this.edad} años y vivo en ${this.domicilio}`
     }
+  }
   const marcos = new Persona ('Marcos', 'Fernandez', 28, 'Neuquen')
   const martina = new Persona ('Martina', 'Perez', 20, 'Chile')
   const agus = new Persona ('Agustina', 'Zanata', 18, 'Tucuman')
