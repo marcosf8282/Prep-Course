@@ -17,25 +17,17 @@ function operacionMatematica(n1, n2, cb) {
   //Vamos a recibir una función que realiza una operación matemática como callback junto con dos números.
   //Devolver el callback pasándole como argumentos los números recibidos.
   //Tu código:
-  function sumar(n1, n2){
-    return n1 + n2;
-  }
-
-  function crearSuma(n1, n2, cb){
-    return cb(n1 , n2);
-  }
-
-  console.log(crearSuma(5, 50, sumar))
+  return cb(n1, n2);
 }
-operacionMatematica()
+
 
 function sumarArray(numeros, cb) {
   // Suma todos los números enteros (int/integers) de un array ("numeros")
   // Pasa el resultado a `cb`
   // No es necesario devolver nada
   //Tu código:
-  const suma = numeros.reduce(function (acc, elemento){
-    return acc + elemento
+  const suma = numeros.reduce(function (cb, elemento){
+    return cb + elemento
   })
   console.log(suma)
 }
@@ -45,26 +37,21 @@ function forEach(array, cb) {
   // Itera sobre la matriz "array" y pasa los valores al callback uno por uno
   // Pista: Estarás invocando a `cb` varias veces (una por cada valor en la matriz)
   //Tu código:
-  array.forEach(function (elemento, cb){
-    console.log(elemento)
-  })
+  for(var i = 0; i < array.length; i++) {
+    cb(array[i]);
+  }
 }
-forEach(['Argentina', 'Alemania', 'Japon', 'Austria'])
 
 function map(array, cb) {
   // Crea un nuevo array
   // Itera sobre cada valor en "array", pásalo a `cb` y luego ubicar el valor devuelto por `cb` en un nuevo array
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
-  const paisesNuevos = [];
-
-  array.map(function (cb){
-    paisesNuevos.push(cb);
-  })
-  console.log(paisesNuevos)
-
+  var nuevoArray = array.map(function(el) {
+    return cb(el);
+  });
+  return nuevoArray;
 }
-map(['Argentina ', ' Alemania ', ' Japon ', ' Austria '])
 
 function filter(array) {
   //Filtrar todos los elementos del array que comiencen con la letra "a".
