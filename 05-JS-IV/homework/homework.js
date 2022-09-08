@@ -8,21 +8,14 @@ function crearGato (nombre, edad) {
   // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
   // Devuelve el objeto
   // Tu código:
-  const obj = {
-    nombre: 'Marcos',
-    edad: 25,
-  }
-  console.log(obj)
+  const obj = {nombre: nombre, edad: edad,}
 
-  function meow(){
-      const str = {
-          grito: 'Meow!'
-      }
-      console.log(str.grito)
+  function meow (maullar) {
+      return maullar
   }
-  meow()
+  meow('Meow!')
 }
-crearGato()
+crearGato('riky', 20)
 
 
 function agregarPropiedad (objeto, property) {
@@ -32,7 +25,7 @@ function agregarPropiedad (objeto, property) {
   // Tu código:
 
   const obj ={
-      property: property
+    property: property
   }
   console.log(obj)
 }
@@ -91,12 +84,12 @@ function nuevoUsuario (nombre, email, password) {
   // Crea un nuevo objeto con las propiedades coincidiendo con los argumentos que se pasan a la función
   // Devuelve el objeto
   // Tu código:
-  const usuario = {
+  const objeto = {
     name: nombre,
     correo: email,
     contraseña: password
   }
-  console.log(usuario)
+  console.log(objeto)
 }
 nuevoUsuario('Marcos', 'Marcosf3493@gmail.com', '123456')
 
@@ -104,10 +97,8 @@ function tieneEmail (usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
-  const user = {email: 'marcosf@gmail.com', pass: '123'}
-
   function mail(){
-    if(user.hasOwnProperty('email')){
+    if(usuario.hasOwnProperty('email')){
       console.log(true)
     }else{
       console.log(false)
@@ -115,7 +106,7 @@ function tieneEmail (usuario) {
   }
   mail()
 }
-tieneEmail()
+tieneEmail({email: 'marcosf@gmail.com', pass: '123'})
 
 function tienePropiedad (objeto, propiedad) {
   // Devuelve "true" si el objeto (parámetro "objeto") tiene una propiedad (key) cuyo nombre es igual al valor del argumento "propiedad"
@@ -166,15 +157,13 @@ function agregarAmigo (usuario, nuevoAmigo) {
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // Tu código:
-  const user ={
-    nombre: usuario,
-    amigos: {
-      nuevoAmigo
-    }
-  }
-  console.log(user)
+  const arr = [usuario];
+
+  arr.push(nuevoAmigo);
+
+  return arr;
 }
-agregarAmigo('Marcos', 'Albi')
+agregarAmigo('Marcos', 'Albi');
 
 function pasarUsuarioAPremium () {
   // "usuarios" es un array de objetos "usuario"

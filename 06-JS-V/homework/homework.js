@@ -14,19 +14,13 @@ function crearUsuario() {
       this.nombre = nombre;
       this.mail = mail;
       this.password = password
+      this.saludar = 'Mi nombre es ' + `${this.nombre}`
     }
   }
 
-  Usuario.prototype.saludar = function(){
-    return 'Hola mi nombre es ' + this.nombre
-  }
+  const user = new Usuario('marcosf82', 'Marcos', 'marcos@gmail.com', 1234)
 
-  let marcos = new Usuario('marcosf82', 'Marcos', 'marcos@gmail.com', 1234)
-  let juan = new Usuario('Juan15', 'Juan', 'juan@gmail.com', 4568749)
-
-  console.log(marcos.saludar())
-  console.log(juan.saludar())
-
+  console.log(user.saludar)  
 }
 crearUsuario()
 
@@ -90,12 +84,7 @@ agregarStringInvertida()
       this.detalle = `Mi nombre es ${this.nombre} ${this.apellido}, tengo ${this.edad} años y vivo en ${this.domicilio}`
     }
   }
-  const marcos = new Persona ('Marcos', 'Fernandez', 28, 'Neuquen')
-  const martina = new Persona ('Martina', 'Perez', 20, 'Chile')
   const agus = new Persona ('Agustina', 'Zanata', 18, 'Tucuman')
-    
-  console.log(marcos.detalle)
-  console.log(martina.detalle)
   console.log(agus.detalle)
 
 
@@ -104,7 +93,7 @@ function crearInstanciaPersona(nombre, apellido, edad, dir) {
   //Con esta función vamos a crear una nueva persona a partir de nuestro constructor de persona (creado en el ejercicio anterior)
   //Recibirá los valores "Juan", "Perez", 22, "Saavedra 123" para sus respectivas propiedades
   //Devolver la nueva persona creada
-  class Persona{
+  class Persona {
     constructor(nombre, apellido, edad, dir){
       this.nombre = nombre;
       this.apellido = apellido;
@@ -113,9 +102,9 @@ function crearInstanciaPersona(nombre, apellido, edad, dir) {
     }
   }
 
-  const marcos = new Persona ('Juan', 'Perez', 22, 'Saavedra 123')
+  const person = new Persona ('Juan', 'Perez', 22, 'Saavedra 123')
 
-  console.log(marcos)
+  return person
 }
 crearInstanciaPersona()
   
@@ -132,7 +121,7 @@ function agregarMetodo() {
       this.datos = `Mi nombre es ${this.nombre} y tengo ${this.edad} años`
     }
   }
-  const juan = new Persona ('Juan', 22)
+  const juan = new Persona ('Juan', '', 22, '')
     
   console.log(juan.datos)
 }
