@@ -3,27 +3,21 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
-  const gustos = ['Programacion', 'Mate', 'Patagonia'];
-  return gustos[0]
+  return array[0]
 }
-devolverPrimerElemento()
 
 function devolverUltimoElemento(array) {
   // Devuelve el último elemento de un array
   // Tu código:
-  const gustos = ['Programacion', 'Mate', 'Patagonia'];
-  return gustos[2]
+  return array.length -1 ;
 }
-devolverUltimoElemento()
 
 
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
-  const gustos = ['Programacion', 'Mate', 'Patagonia'];
-  return gustos.length
+  return array.length
 }
-obtenerLargoDelArray()
 
 
 function incrementarPorUno(array) {
@@ -31,23 +25,19 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-  const gustos = ['Programacion', 'Mate', 'Patagonia'];
-  for(let i = 0; i < gustos.length; i++){
-    return gustos[i]
+  for(let i = 0; i < array.length; i++){
+    return array[i]
   }
 }
-incrementarPorUno()
 
 
 function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  const gustos = ['Programacion', 'Mate', 'Patagonia'];
-  gustos.push('marcos')
-  return gustos
+  array.push(elemento)
+  return array
 }
-agregarItemAlFinalDelArray()
 
 
 function agregarItemAlComienzoDelArray(array, elemento) {
@@ -58,7 +48,6 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   array.unshift(elemento)
   return array
 }
-agregarItemAlComienzoDelArray(['Programacion', 'Mate', 'Patagonia'], 'marcos')
 
 
 function dePalabrasAFrase(palabras) {
@@ -69,7 +58,6 @@ function dePalabrasAFrase(palabras) {
   // Tu código:
   return palabras.join(' ')
 }
-dePalabrasAFrase(['Villa', 'Nieve', 'Sol'])
 
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
@@ -81,7 +69,6 @@ function arrayContiene(array, elemento) {
     return false
   }
 }
-arrayContiene(['Villa', 'Nieve', 'Sol'], 'Sol')
 
 
 function agregarNumeros(numeros) {
@@ -95,7 +82,6 @@ function agregarNumeros(numeros) {
   }
   return sum
 }
-agregarNumeros([3, 5, 8, 2])
 
 
 function promedioResultadosTest(resultadosTest) {
@@ -109,7 +95,6 @@ function promedioResultadosTest(resultadosTest) {
   }
   return suma/resultadosTest.length
 }
-promedioResultadosTest([2, 8, 2, 5, 6, 4])
 
 
 function numeroMasGrande(numeros) {
@@ -120,7 +105,6 @@ function numeroMasGrande(numeros) {
   var max = Math.max(...numeros)
   return max
 }
-numeroMasGrande([2, 30, 80, 65])
 
 function multiplicarArgumentos(arguments) {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
@@ -138,7 +122,6 @@ function multiplicarArgumentos(arguments) {
     return 0;
   }
 }
-multiplicarArgumentos([5])
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
@@ -147,7 +130,6 @@ function cuentoElementos(arreglo){
 
   return result;
 }
-cuentoElementos([5, 25, 56, 82, 15])
 
 function diaDeLaSemana(numeroDeDia) {
   //Suponga que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente. 
@@ -160,7 +142,6 @@ function diaDeLaSemana(numeroDeDia) {
     return ('Es dia laboral')
   }
 } 
-diaDeLaSemana(4)
 
 
 function empiezaConNueve(n) {
@@ -174,17 +155,14 @@ function empiezaConNueve(n) {
     return false
   }
 }
-empiezaConNueve(95)
 
 function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  let arr = arreglo
-
-  let pos1 = arr[0]
-  let pos2 = arr[1]
-  let pos3 = arr[2]
+  let pos1 = arreglo[0]
+  let pos2 = arreglo[1]
+  let pos3 = arreglo[2]
 
   if(pos1 === pos2 && pos1 === pos3){
     return true
@@ -192,7 +170,6 @@ function todosIguales(arreglo) {
     return false
   }
 };
-todosIguales([1, 1, 1])
 
 
 function mesesDelAño(array) {
@@ -201,6 +178,7 @@ function mesesDelAño(array) {
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
   let nuevoArray = [];
+
   for (let i = 0 ; i < array.length ; i++) {
     if ( array[i] === 'Enero' || array[i] === 'Marzo' || array[i] === 'Noviembre') {
       nuevoArray.push(array[i]);
@@ -210,7 +188,6 @@ function mesesDelAño(array) {
   }
   return nuevoArray;
 }
-mesesDelAño(['Enero','Agosto','Marzo','Octubre','Noviembre'])
 
 
 
@@ -223,12 +200,12 @@ function mayorACien(array) {
   array.map(function(x) {
     if(x > 100){
       array1.push(x);
-      console.log(array1)
     }
   });
 
+  return array1
+
 }
-mayorACien([0, 150, 99, 182, 65, 101])
 
 function breakStatement(numero) {
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
@@ -251,7 +228,6 @@ function breakStatement(numero) {
   }
   return array1
 }
-breakStatement([2])
 
 function continueStatement(numero) {
   //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.

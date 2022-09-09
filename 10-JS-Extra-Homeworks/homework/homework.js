@@ -34,7 +34,7 @@ function numberOfCharacters(string) {
     }else{
       cantCaracteres[string[i]] = 1;
     }
-    
+
   }
 
   return cantCaracteres
@@ -66,17 +66,17 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
-  var palabrasSeparadas = str.split(' ');
+  var palabrasSeparadas = str.split(" ");
 
   var fraseInvertida = [];
 
-  for (var i = 0; i < palabrasSeparadas.length; i++) {
-    fraseInvertida.push(palabrasSeparadas[i].split(' ').reverse().join(' '));
+  for (let i = 0; i < palabrasSeparadas.length; i++) {
+    fraseInvertida.push(palabrasSeparadas[i].split(" ").reverse().join(" "));
   }
 
-  return fraseInvertida.join(' ');
-} 
-
+  fraseInvertida = fraseInvertida.join(" ");
+  return fraseInvertida
+}
 
 function capicua(numero){
   //Escribe una función, la cual recibe un número y determina si es o no capicúa.

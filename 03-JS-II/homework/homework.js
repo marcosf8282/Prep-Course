@@ -8,7 +8,6 @@ function obtenerMayor(x, y) {
   let res = Math.max(x, y);
   return res
 }
-obtenerMayor(80, 5);
 
 function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
@@ -20,7 +19,6 @@ function mayoriaDeEdad(edad) {
     return ('Not allowed');
   }
 }
-mayoriaDeEdad(22)
   
 function conection(status) {
   //Recibimos un estado de conexión de un usuario representado por un valor numérico. 
@@ -36,7 +34,6 @@ function conection(status) {
     return ('Offline')
   }
 }
-conection(1)
 
 function saludo(idioma) {
   // Devuelve un saludo en tres diferentes lenguajes:
@@ -55,7 +52,6 @@ function saludo(idioma) {
     return ('Hola!')
   }
 }
-saludo('chno')
 
 function colors(color) {
   //La función recibe un color. Devolver el string correspondiente:
@@ -82,7 +78,6 @@ function colors(color) {
       return('Color not found');
   }
 }
-colors('blue')
 
 function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
@@ -94,7 +89,6 @@ function esDiezOCinco(numero) {
     return false
   }
 }
-esDiezOCinco(15);
 
 function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
@@ -106,7 +100,6 @@ function estaEnRango(numero) {
     return false
   }
 }
-estaEnRango(82)
 
 function esEntero(numero) {
   // Devuelve "true" si "numero" es un entero (int/integer)
@@ -122,7 +115,6 @@ function esEntero(numero) {
     return false;
   }
 }
-esEntero(1)
 
 function fizzBuzz(numero) {
   // Si "numero" es divisible entre 3, devuelve "fizz"
@@ -139,7 +131,6 @@ function fizzBuzz(numero) {
     return numero;
   }
 }
-fizzBuzz(9)
 
 function operadoresLogicos(num1, num2, num3) {
   //La función recibe tres números distintos. 
@@ -168,12 +159,14 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-    if (numero <=1) return false;
-    for (var i = 2; i <= numero -1; i++)
-        if (numero % i == 0) return false;
-    return true;
+  if (numero <=1) return false;
+  for (var i = 2; i <= numero -1; i++){
+    if (numero % i == 0) {
+      return false
+    };
+  }
+  return true;
 }
-esPrimo(29)
 
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
@@ -185,7 +178,6 @@ function esVerdadero(valor){
     return ('Soy falso');
   }
 }
-esVerdadero(true)
 
 function tablaDelSeis(x){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
@@ -195,7 +187,6 @@ function tablaDelSeis(x){
     return (x * i)
   }
 }
-tablaDelSeis(6)
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
@@ -206,23 +197,19 @@ function tieneTresDigitos(numero){
     return false
   }
 }
-tieneTresDigitos('555')
 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
-  let result = '';
-  let i = 0;
-
   do {
-    i = i + 1;
-    result = result + i;
+    for (let i = 0; i < numero.length; i++) {
+      numero[i] + 5
+    }
   } while (i < 8);
 
   return result;
 }
-doWhile(5)
 
 
 // No modificar nada debajo de esta línea
