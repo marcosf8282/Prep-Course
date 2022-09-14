@@ -51,7 +51,7 @@ function eliminarPropiedad (objeto, unaPropiedad) {
   // tip: tenes que usar bracket notation
   // Devuelve el objeto
   // Tu código:
-  delete objeto[propiedad];
+  delete objeto[unaPropiedad];
 
   return objeto;
 }
@@ -130,6 +130,7 @@ function pasarUsuarioAPremium () {
   for(var i = 0; i < usuarios.length; i++) {
     usuarios[i].esPremium = true;
   }
+  
   return usuarios;
 }
 

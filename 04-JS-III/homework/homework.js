@@ -12,13 +12,11 @@ function devolverUltimoElemento(array) {
   return array.length -1 ;
 }
 
-
 function obtenerLargoDelArray(array) {
   // Devuelve el largo de un array
   // Tu código:
   return array.length
 }
-
 
 function incrementarPorUno(array) {
   // "array" debe ser una matriz de enteros (int/integers)
@@ -30,7 +28,6 @@ function incrementarPorUno(array) {
   }
 }
 
-
 function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
@@ -38,7 +35,6 @@ function agregarItemAlFinalDelArray(array, elemento) {
   array.push(elemento)
   return array
 }
-
 
 function agregarItemAlComienzoDelArray(array, elemento) {
   // Añade el "elemento" al comienzo del array
@@ -48,7 +44,6 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   array.unshift(elemento)
   return array
 }
-
 
 function dePalabrasAFrase(palabras) {
   // "palabras" es un array de strings/cadenas
@@ -70,7 +65,6 @@ function arrayContiene(array, elemento) {
   }
 }
 
-
 function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
@@ -83,7 +77,6 @@ function agregarNumeros(numeros) {
   return sum
 }
 
-
 function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
@@ -95,7 +88,6 @@ function promedioResultadosTest(resultadosTest) {
   }
   return suma/resultadosTest.length
 }
-
 
 function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
@@ -143,7 +135,6 @@ function diaDeLaSemana(numeroDeDia) {
   }
 } 
 
-
 function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
@@ -171,7 +162,6 @@ function todosIguales(arreglo) {
   }
 };
 
-
 function mesesDelAño(array) {
   //Dado un array que contiene algunos meses del año desordenados, recorrer el array buscando los meses de 
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
@@ -183,13 +173,11 @@ function mesesDelAño(array) {
     if ( array[i] === 'Enero' || array[i] === 'Marzo' || array[i] === 'Noviembre') {
       nuevoArray.push(array[i]);
     }else if(typeof array[i] != array){
-      console.log('No se encontraron los meses pedidos')
+      return "No se encontraron los meses pedidos";
     }
   }
   return nuevoArray;
 }
-
-
 
 function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
@@ -204,7 +192,6 @@ function mayorACien(array) {
   });
 
   return array1
-
 }
 
 function breakStatement(numero) {
@@ -224,8 +211,8 @@ function breakStatement(numero) {
     }
     numero = numero *2
     array1.push(numero)
-    
   }
+
   return array1
 }
 
@@ -244,12 +231,10 @@ function continueStatement(numero) {
     }
     numero = numero *2
     array.push(numero)
-    
   }
+
   return array
 }
-continueStatement(5)
-
 
 // No modificar nada debajo de esta línea
 // --------------------------------

@@ -151,7 +151,6 @@ function operadoresLogicos(num1, num2, num3) {
     return false;
   }
 }
-operadoresLogicos(50, 50, 10)
 
 function esPrimo(numero) {
   // Devuelve "true" si "numero" es primo
