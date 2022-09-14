@@ -20,9 +20,8 @@ function crearUsuario() {
 
   const user = new Usuario('marcosf82', 'Marcos', 'marcos@gmail.com', 1234)
 
-  console.log(user.saludar)  
+  return user.saludar
 }
-crearUsuario()
 
 function agregarMetodoPrototype(constructor) {
   // Agrega un método al Constructor del `prototype`
@@ -38,10 +37,8 @@ function agregarMetodoPrototype(constructor) {
     return this.saludar
   }
 
-  const saludo1 = new bienvendio(saludo)
-
+  return new bienvendio(saludo)
 }
-agregarMetodoPrototype()
 
 function agregarStringInvertida() {
   // Agrega un método al prototype de String que devuelva la misma cadena de caracteres, pero invertida.
@@ -50,18 +47,17 @@ function agregarStringInvertida() {
   // 'toni'.reverse() => 'inot'
   // Pista: Necesitarás usar "this" dentro de "reverse"
   function darVuelta(inver){
-      this.inver = inver;
+    this.inver = inver;
   }
 
   let mar = new darVuelta('marcos');
 
   darVuelta.prototype.hola = function(){
-      return 'hola ' + this.inver;
+    return 'hola ' + this.inver;
   }
   
   console.log(mar.hola())
 }
-agregarStringInvertida()
 
 // ---------------------------------------------------------------------------//
   //Crea el constructor de la clase "Persona"
@@ -102,11 +98,8 @@ function crearInstanciaPersona(nombre, apellido, edad, dir) {
     }
   }
 
-  const person = new Persona ('Juan', 'Perez', 22, 'Saavedra 123')
-
-  return person
+  return new Persona ('Juan', 'Perez', 22, 'Saavedra 123')
 }
-crearInstanciaPersona()
   
 function agregarMetodo() {
   //La función agrega un método "datos" a la clase Persona que toma el nombre y la edad de la persona y devuelve: 
@@ -123,9 +116,8 @@ function agregarMetodo() {
   }
   const juan = new Persona ('Juan', '', 22, '')
     
-  console.log(juan.datos)
+  return juan.datos
 }
-agregarMetodo()
   
 
 // No modificar nada debajo de esta línea
