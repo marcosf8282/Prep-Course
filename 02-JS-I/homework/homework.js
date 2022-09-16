@@ -16,7 +16,7 @@ const nuevaResta = 10 - 5 === 5;
 const nuevaMultiplicacion = 10 * 4 === 40 ;
 
 // Resuelve el siguiente problema matemático:
-const nuevoModulo = 21 % 5 === 0;
+const nuevoModulo = 21 % 5 === 1.05;
 
 
 // En los próximos 22 problemas, deberás completar la función.
@@ -61,9 +61,9 @@ function sonIguales(x, y) {
   // De lo contrario, devuelve "false"
   // Tu código:
   if(x === y){
-    return false;
-  }else{
     return true;
+  }else{
+    return false;
   }
 }
 
@@ -83,9 +83,9 @@ function menosQueNoventa(num) {
   // De lo contrario, devuelve "false"
   // Tu código:
   if(num < 90){
-    return false
-  }else{
     return true
+  }else{
+    return false
   }
 }
 
@@ -94,17 +94,16 @@ function mayorQueCincuenta(num) {
   // De lo contrario, devuelve "false"
   // Tu código:
   if(num > 50){
-    return false
-  }else{
     return true
+  }else{
+    return false
   }
 }
 
 function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
-  let resto = (x % y == 0)
-  return resto
+  return x / y 
 }
 
 function esPar(num) {
@@ -112,9 +111,9 @@ function esPar(num) {
   // De lo contrario, devuelve "false"
   // Tu código:
   if(num % 2 == 0){
-    return false
-  }else{
     return true
+  }else{
+    return false
   }
 }
 
@@ -133,7 +132,7 @@ function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  return Math.SQRT2(num);
+  return num * num;
 }
 
 function elevarAlCubo(num) {
@@ -157,7 +156,7 @@ function redondearNumero(num) {
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  return Math.fround(num);
+  return Math.round(num);
 }
 
 function numeroRandom() {
@@ -166,13 +165,11 @@ function numeroRandom() {
   return Math.random();
 }
 
-function esPositivo() {
+function esPositivo(numero) {
   //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  let numero = 0;
-
   if(numero > 0){
     return ('Es positivo')
   }if(numero < 0){
@@ -182,30 +179,25 @@ function esPositivo() {
   }
 }
 
-function agregarSimboloExclamacion() {
+function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
-  let str = 'hello world';
   return str + '!'
 }
 
-function combinarNombres() {
+function combinarNombres(firstName, lastName) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  let nombre = 'hello';
-  let apellido = ' world';
-
-  return nombre + apellido
+  return firstName + ' ' + lastName
 }
 
-function obtenerSaludo(valor) {
+function obtenerSaludo(name) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  let nombre = valor;
-  return 'Hola ' + nombre
+  return 'Hola {name}'
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -214,10 +206,9 @@ function obtenerAreaRectangulo(alto, ancho) {
   return alto * ancho;
 }
 
-function retornarPerimetro(valor){
+function retornarPerimetro(lado){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
-  let lado = valor;
   return lado * 4
 }
 
@@ -225,8 +216,7 @@ function retornarPerimetro(valor){
 function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
-
-  return base * altura
+  return base * altura / 2
 }
 
 
