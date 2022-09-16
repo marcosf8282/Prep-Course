@@ -25,52 +25,41 @@ const nuevoModulo = 21 % 5 === 0;
 // Pista: "console.log()" NO fucionará.
 // No cambies los nombres de las funciones.
 
-function devolverString() {
+function devolverString(str) {
   // "Return" la string provista: str
   // Tu código:
-  let str = 'Henry';
   return str;
 }
 
-function suma() {
+function suma(x, y) {
   // "x" e "y" son números
   // Suma "x" e "y" juntos y devuelve el valor
   // Tu código:
-  let x = 2;
-  let y = 2;
-  return (x + y);
+  return x + y
 }
 
-function resta() {
+function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
-  let x = 18;
-  let y = 18;
-  return (x - y) ;
+  return x - y
 }
 
-function multiplica() {
+function multiplica(x, y) {
   // Multiplica "x" por "y" y devuelve el valor
   // Tu código:
-  let x = 11;
-  let y = 2;
-  return (x * y);
+  return x * y
 }
 
-function divide() {
+function divide(x, y) {
   // Divide "x" entre "y" y devuelve el valor
   // Tu código:
-  let x = 70;
-  let y = 70;
   return x / y;
 }
 
-function sonIguales() {
+function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:
-  let x = 20;
-  let y = 20;
   if(x === y){
     return false;
   }else{
@@ -78,7 +67,7 @@ function sonIguales() {
   }
 }
 
-function tienenMismaLongitud() {
+function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
@@ -89,12 +78,10 @@ function tienenMismaLongitud() {
   }    
 }
 
-function menosQueNoventa() {
+function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
   // De lo contrario, devuelve "false"
   // Tu código:
-  let num = 82;
-
   if(num < 90){
     return false
   }else{
@@ -102,12 +89,10 @@ function menosQueNoventa() {
   }
 }
 
-function mayorQueCincuenta() {
+function mayorQueCincuenta(num) {
   // Devuelve "true" si el argumento de la función "num" es mayor que cincuenta
   // De lo contrario, devuelve "false"
   // Tu código:
-  let num = 95;
-
   if(num > 50){
     return false
   }else{
@@ -115,22 +100,17 @@ function mayorQueCincuenta() {
   }
 }
 
-function obtenerResto() {
+function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
-  let x = 50;
-  let y = 10;
-  const resto = (x % y == 0)
-  
+  let resto = (x % y == 0)
   return resto
 }
 
-function esPar() {
+function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-  let num = 89;
-
   if(num % 2 == 0){
     return false
   }else{
@@ -138,12 +118,10 @@ function esPar() {
   }
 }
 
-function esImpar() {
+function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  let num = 9;
-
   if(num % 2 == 0){
     return false
   }else{
@@ -151,51 +129,41 @@ function esImpar() {
   }
 }
 
-function elevarAlCuadrado() {
+function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  let num = 6;
-  return num * num;
+  return Math.SQRT2(num);
 }
 
-function elevarAlCubo() {
+function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  let num = 3;
   return num * num * num;
 }
 
-function elevar() {
+function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-  let num = 2;
-  let exponent = 2;
-  const res = Math.pow(num, exponent);
-  return res 
+  return Math.pow(num, exponent);
 }
 
-function redondearNumero() {
+function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  let num = 5.60;
-  const res = Math.round(num);
-  return res
+  return Math.round(num);
 }
 
-function redondearHaciaArriba() {
+function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  let num = 5.55;
-  const res = Math.fround(num);
-  return (res)
+  return Math.fround(num);
 }
 
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  const num = Math.random();
-  return (num)
+  return Math.random();
 }
 
 function esPositivo() {
@@ -232,54 +200,45 @@ function combinarNombres() {
   return nombre + apellido
 }
 
-function obtenerSaludo() {
+function obtenerSaludo(valor) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  const nombre = 'Martin!';
-
+  let nombre = valor;
   return 'Hola ' + nombre
 }
 
-function obtenerAreaRectangulo() {
+function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
-  let alto = 2;
-  let ancho = 2;
   return alto * ancho;
 }
 
-function retornarPerimetro(){
+function retornarPerimetro(valor){
   //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
   //Escribe tu código aquí
-  let lado = 2;
-  // como es un rectangulo sus 4 lados son son iguales
-
+  let lado = valor;
   return lado * 4
 }
 
 
-function areaDelTriangulo(){
+function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
-  let base = 5;
-  let altura = 5;
+
   return base * altura
 }
 
 
-function deEuroAdolar(){
+function deEuroAdolar(euroRecibido){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-  let euro = 1;
+  let euro = 1
   let dolar = 1.20
-  let cantEuro = 100;
-  const respuesta = (cantEuro * dolar)
-  return respuesta
-}
-deEuroAdolar()
 
+  return euroRecibido * dolar / euro;
+}
 
 function esVocal(letra){
   //Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”. 
