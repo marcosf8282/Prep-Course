@@ -185,7 +185,7 @@ function mayorACien(array) {
   // Tu código:
   let array1 = [];
   
-  array.map(function(x) {
+  array.map(function(x){
     if(x > 100){
       array1.push(x);
     }
@@ -207,7 +207,7 @@ function breakStatement(numero) {
   for(let i = 0; i <= 10; i++){
     if(i === 2){
       console.log('Se interrumpió la ejecución')
-      break;
+      break 
     }
     numero = numero *2
     array1.push(numero)
