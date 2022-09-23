@@ -5,7 +5,7 @@ function mayuscula(nombre) {
   //ej: Recibe "mario" ----> Devuelve "Mario"
   return nombre[0].toUpperCase() + nombre.slice(1);
 }
-mayuscula('marcos')
+
 
 function invocarCallback(cb) {
   // Invoca al callback `cb`
@@ -26,12 +26,8 @@ function sumarArray(numeros, cb) {
   // Pasa el resultado a `cb`
   // No es necesario devolver nada
   //Tu código:
-  const suma = numeros.reduce(function (cb, elemento){
-    return cb + elemento
-  })
-  console.log(suma)
+  cb(numeros.reduce((cb, elemento) => cb + elemento, 0))
 }
-sumarArray([1 , 5 , 6 , 82 , 6])
 
 function forEach(array, cb) {
   // Itera sobre la matriz "array" y pasa los valores al callback uno por uno
