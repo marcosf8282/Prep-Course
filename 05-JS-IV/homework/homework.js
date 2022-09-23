@@ -116,15 +116,11 @@ function agregarAmigo (usuario, nuevoAmigo) {
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // Tu código:
-  const user = {
-    amigo: [usuario],
-  }
-  user.amigo.push(nuevoAmigo);
-
-  return user;
+  usuario.amigos.push(nuevoAmigo)
+  return usuario
 }
 
-function pasarUsuarioAPremium () {
+function pasarUsuarioAPremium (usuarios) {
   // "usuarios" es un array de objetos "usuario"
   // Cada objeto "usuario" tiene la propiedad "esPremium"
   // Define cada propiedad "esPremium" de cada objeto como "true"
@@ -133,7 +129,6 @@ function pasarUsuarioAPremium () {
   for(var i = 0; i < usuarios.length; i++) {
     usuarios[i].esPremium = true;
   }
-
   return usuarios;
 }
 
